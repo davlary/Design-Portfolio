@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Works | David Hillary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  
+</head>
+<body>
+  <header>
+    <h1>My Works</h1>
+    <p>Creative projects by David Udeji</p>
+  </header>
+
+  <section class="gallery">
+    <h2><a href="../index.html">Design Showcase</a></h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Project 1">
+        <div class="overlay">Brand Identity</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Project 2">
+        <div class="overlay">Poster Design</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Project 3">
+        <div class="overlay">Product Mockup</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58" alt="Project 4">
+        <div class="overlay">Web Design</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Project 5">
+        <div class="overlay">Flyer Design</div>
+      </div>
+      <div class="grid-item">
+        <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf5" alt="Project 6">
+        <div class="overlay">Logo Design</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 David Hillary. All rights reserved.
+  </footer>
+
+  <script>
+    // 🔹 Fade-in animation on scroll
+    const items = document.querySelectorAll('.grid-item');
+
+    const revealOnScroll = () => {
+      const triggerPoint = window.innerHeight * 0.85;
+      items.forEach(item => {
+        const top = item.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+          item.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

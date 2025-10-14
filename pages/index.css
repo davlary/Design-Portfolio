@@ -1,0 +1,134 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0a0f1f, #2a5298);
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: fadeDown 1.5s ease forwards;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      animation: fadeDown 1.5s ease forwards 0.5s;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+ a{
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+
+    section.gallery {
+      padding: 4rem 10%;
+    }
+
+    section.gallery h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      color: #2a5298;
+    }
+
+    section.gallery h2::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: #2a5298;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .grid-item.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .grid-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .grid-item:hover .overlay {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0a0f1f;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  
